@@ -33,7 +33,13 @@ const modelAndModel = new ModelAndModel({
   },
   gemini: {
     apiKey: 'your-gemini-api-key',
-    baseURL: 'your-gemini-base-url' // Optional
+    // Currently model-and-model uses the OpenAI SDK to talk to Gemini 
+    // because it supports overriding the base URL. So for now, we must
+    // pass an OpenAI compatible URL to the baseURL here to make it work.
+    // One example is https://generativelanguage.googleapis.com/v1beta/openai/
+    // Once the official google/genai package supports base URLs, this will
+    // no longer be optional.
+    baseURL: 'your-gemini-base-url' // Required
   }
 });
 
