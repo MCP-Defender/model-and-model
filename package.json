@@ -1,0 +1,36 @@
+{
+    "name": "model-and-model",
+    "version": "1.0.0",
+    "description": "Call multiple LLMs in parallel",
+    "main": "dist/index.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "test": "node --no-warnings --experimental-vm-modules node_modules/.bin/jest",
+        "prepare": "npm run build"
+    },
+    "keywords": [
+        "llm",
+        "ai",
+        "openai",
+        "chatgpt",
+        "gpt",
+        "anthropic",
+        "claude",
+        "gemini"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@anthropic-ai/sdk": "^0.18.0",
+        "openai": "^4.28.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.12",
+        "@types/node": "^20.11.24",
+        "jest": "^29.7.0",
+        "msw": "^2.7.5",
+        "ts-jest": "^29.1.2",
+        "typescript": "^5.3.3"
+    }
+}
